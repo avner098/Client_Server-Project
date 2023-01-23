@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="servergui.ProjectServerController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="599.0" prefWidth="826.0" style="-fx-background-color: #303F9F;">
+         <children>
+            <ImageView fx:id="img" fitHeight="135.0" fitWidth="258.0" layoutX="289.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/logo.jpg" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="serverConsole" layoutX="471.0" layoutY="421.0" prefHeight="135.0" prefWidth="304.0" />
+            <TableView fx:id="connectclient" layoutX="455.0" layoutY="198.0" prefHeight="141.0" prefWidth="335.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox layoutX="83.0" layoutY="152.0">
+               <children>
+                  <VBox spacing="25.0">
+                     <children>
+                        <Label text="ip:" textFill="#eaea0e">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="port:" textFill="#eaea0e">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="94.0" text="DB name:" textFill="#eaea0e">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="90.0" text="user name:" textFill="#eaea0e">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="94.0" text="password:" textFill="#eaea0e">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <TextField fx:id="ip" alignment="CENTER" prefHeight="30.0" prefWidth="170.0">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="port" alignment="CENTER" prefHeight="30.0" prefWidth="170.0">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="DBname" alignment="CENTER" prefHeight="30.0" prefWidth="170.0">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="username" alignment="CENTER" prefHeight="30.0" prefWidth="170.0">
+                           <font>
+                              <Font name="Lucida Fax Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="password" prefHeight="30.0" prefWidth="170.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox layoutX="198.0" layoutY="356.0" spacing="30.0">
+               <children>
+                  <Button fx:id="connectBTN" mnemonicParsing="false" onAction="#connect" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #03A9F4;" text="connect" textFill="#eaea0e">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="disconnectBTN" mnemonicParsing="false" onAction="#disconnect" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #03A9F4;" text="disconnect" textFill="#eaea0e">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <HBox layoutX="493.0" layoutY="356.0" spacing="20.0">
+               <children>
+                  <Button fx:id="importbtn" mnemonicParsing="false" onAction="#onimport" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #03A9F4;" text="Import" textFill="#eaea0e">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="exportbtn" mnemonicParsing="false" onAction="#onexport" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #03A9F4;" text="export" textFill="#eaea0e">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
