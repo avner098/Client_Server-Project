@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="696.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.regisrionController">
+   <children>
+      <MenuBar prefHeight="22.0" prefWidth="654.0" VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <MenuItem mnemonicParsing="false" text="Open…" />
+                  <Menu mnemonicParsing="false" text="Open Recent" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As…" />
+                  <MenuItem mnemonicParsing="false" text="Revert" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Preferences…" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Quit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Undo" />
+                  <MenuItem mnemonicParsing="false" text="Redo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Cut" />
+                  <MenuItem mnemonicParsing="false" text="Copy" />
+                  <MenuItem mnemonicParsing="false" text="Paste" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Select All" />
+                  <MenuItem mnemonicParsing="false" text="Unselect All" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="671.0" prefWidth="660.0" style="-fx-background-color: #303F9F;">
+         <children>
+            <ImageView fx:id="img" fitHeight="118.0" fitWidth="252.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/logo.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="243.0" layoutY="23.0" prefHeight="66.0" prefWidth="291.0" text="Register Form" textFill="#eaea0e">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRegister" layoutX="513.0" layoutY="601.0" mnemonicParsing="false" onAction="#onRegister" prefHeight="47.0" prefWidth="131.0" style="-fx-background-color: #03A9F4;" text="Register" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBack" layoutX="43.0" layoutY="601.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="47.0" prefWidth="116.0" style="-fx-background-color: #03A9F4;" text="BACK" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Label fx:id="laRegisterSucsess" layoutX="201.0" layoutY="532.0" text="pending mangers aproval" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="laInfoMiss" layoutX="203.0" layoutY="625.0" text="Register Fail info missing" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <HBox fx:id="Hform" layoutX="66.0" layoutY="190.0">
+               <children>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label text="First Name" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Last Name" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="ID" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess13" text="Credit Card Number" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Phone Number" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Email Address" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="User Name" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Password" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Region" textFill="#eaea0e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess110" text="* mendatory componenrt" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <TextField fx:id="firstname" prefHeight="25.0" prefWidth="0.0" promptText="Ido" />
+                        <TextField fx:id="lastname" promptText="Choen" />
+                        <TextField fx:id="id" promptText="507189788" />
+                        <TextField fx:id="creditcard" promptText="1111-2222-3333-4444" />
+                        <TextField fx:id="phone" promptText="050-1234567" />
+                        <TextField fx:id="email" promptText="name@email.com" />
+                        <TextField fx:id="username" promptText="Ido1234" />
+                        <TextField fx:id="password" promptText="123456" />
+                        <ComboBox fx:id="ComboRegion" prefWidth="150.0" promptText="Region" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label fx:id="laRegisterSucsess1" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess11" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess12" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess14" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess15" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess16" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess17" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess18" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laRegisterSucsess19" text="*" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label fx:id="usernamefail" layoutX="169.0" layoutY="593.0" text="user name or ID is already taken" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <HBox layoutX="32.0" layoutY="138.0" spacing="10.0">
+               <children>
+                  <Label text="Please select a user to register as a customer" textFill="#eaea0e">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="userCombo" prefWidth="150.0" promptText="Users" />
+                  <Button fx:id="btnBack1" mnemonicParsing="false" onAction="#onShow" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: #03A9F4;" text="SHOW" textFill="#eaea0e">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="showLabel" layoutX="235.0" layoutY="564.0" text="Need to select User" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="656.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.order2Controller">
+  <children>
+    <MenuBar prefHeight="22.0" prefWidth="654.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="630.0" prefWidth="858.0" style="-fx-background-color: #303F9F;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="118.0" fitWidth="252.0" layoutX="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@piccc.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="571.0" prefHeight="640.0" prefWidth="251.0" style="-fx-background-color: #03A9F4;">
+               <children>
+                  <ImageView fitHeight="84.0" fitWidth="232.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../ממשק/cart2.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="35.0" layoutY="587.0" mnemonicParsing="false" onAction="#done_order" style="-fx-background-color: #303F9F;" text="done? click here!" textFill="#f7ff08">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="55.0" layoutY="447.0" mnemonicParsing="false" onAction="#delete_product" prefHeight="41.0" prefWidth="117.0" style="-fx-background-color: #303F9F;" text="delete" textFill="#ffd900">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Label alignment="BOTTOM_CENTER" layoutX="32.0" layoutY="500.0" prefHeight="25.0" prefWidth="173.0" style="-fx-background-color: #303F9F;" text="total order:" textAlignment="RIGHT" textFill="#eaea0e" textOverrun="LEADING_WORD_ELLIPSIS">
+                     <opaqueInsets>
+                        <Insets bottom="500.0" left="20.0" />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="total_price" layoutX="169.0" layoutY="505.0" text="0" textFill="#ddff00" />
+                  <TableView fx:id="order_list" layoutX="5.0" layoutY="111.0" prefHeight="322.0" prefWidth="226.0">
+                    <columns>
+                      <TableColumn fx:id="productC" prefWidth="75.0" text="C1" />
+                      <TableColumn fx:id="amountC" prefWidth="75.0" text="C2" />
+                        <TableColumn fx:id="priceC" prefWidth="75.0" text="C1" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="111.0" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #303F9F;" text="product" textFill="#ffd900" />
+                  <Label alignment="CENTER" layoutX="81.0" layoutY="111.0" prefHeight="27.0" prefWidth="66.0" style="-fx-background-color: #303F9F;" text="amount" textFill="#ffd900" />
+                  <Label alignment="CENTER" layoutX="147.0" layoutY="111.0" prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #303F9F;" text="price" textFill="#ffd900" />
+                  <Button layoutX="81.0" layoutY="537.0" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="66.0" style="-fx-background-color: #303F9F;" text="back" textFill="#f2f201">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label alignment="BOTTOM_CENTER" layoutX="236.0" layoutY="138.0" text="please choose:" textAlignment="RIGHT" textFill="#eaea0e" textOverrun="LEADING_WORD_ELLIPSIS">
+               <opaqueInsets>
+                  <Insets bottom="500.0" left="20.0" />
+               </opaqueInsets>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <VBox fx:id="vbox1" layoutY="261.0" prefHeight="382.0" prefWidth="570.0">
+               <children>
+                  <ScrollPane fx:id="scroller" hbarPolicy="NEVER" prefHeight="381.0" prefWidth="570.0" vbarPolicy="ALWAYS">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1042.0" prefWidth="570.0">
+                           <children>
+                              <ImageView fx:id="cola_pic" fitHeight="95.0" fitWidth="123.0" layoutX="317.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../ממשק/kola.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane layoutX="11.0" layoutY="492.0" prefHeight="9.0" prefWidth="547.0" style="-fx-background-color: #303F9F;" />
+                              <Pane layoutX="246.0" layoutY="5.0" prefHeight="996.0" prefWidth="6.0" style="-fx-background-color: #303F9F;" />
+                              <TextField fx:id="cola_name" alignment="CENTER" layoutX="55.0" layoutY="17.0" />
+                              <TextField fx:id="cola_number" alignment="CENTER" layoutX="55.0" layoutY="52.0" />
+                              <TextField fx:id="cola_price" alignment="CENTER" layoutX="55.0" layoutY="84.0" />
+                              <Button fx:id="cola1" layoutX="438.0" layoutY="84.0" mnemonicParsing="false" onAction="#add_cola" style="-fx-background-color: #303F9F;" text="add to my cart" textFill="#ffd900" />
+                              <ImageView fx:id="sprite_pic" fitHeight="82.0" fitWidth="44.0" layoutX="318.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../ממשק/sprite.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane layoutX="11.0" layoutY="239.0" prefHeight="9.0" prefWidth="547.0" style="-fx-background-color: #303F9F;" />
+                              <TextField fx:id="sprite_name" alignment="CENTER" layoutX="55.0" layoutY="137.0" />
+                              <TextField fx:id="sprite_number" alignment="CENTER" layoutX="55.0" layoutY="169.0" />
+                              <TextField fx:id="sprite_price" alignment="CENTER" layoutX="55.0" layoutY="201.0" />
+                              <Button fx:id="sprite1" layoutX="452.0" layoutY="201.0" mnemonicParsing="false" onAction="#add_sprite" style="-fx-background-color: #303F9F;" text="add to my cart" textFill="#ffd900" />
+                              <ImageView fx:id="fanta_pic" fitHeight="95.0" fitWidth="123.0" layoutX="317.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../ממשק/fanta.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane layoutX="11.0" layoutY="357.0" prefHeight="10.0" prefWidth="547.0" style="-fx-background-color: #303F9F;">
+                                 <children>
+                                    <Pane layoutX="-9.0" layoutY="2.0" prefHeight="9.0" prefWidth="547.0" style="-fx-background-color: #303F9F;" />
+                                 </children>
+                              </Pane>
+                              <TextField fx:id="fanta_name" alignment="CENTER" layoutX="55.0" layoutY="259.0" />
+                              <TextField fx:id="fanta_number" alignment="CENTER" layoutX="55.0" layoutY="291.0" />
+                              <TextField fx:id="fanta_price" alignment="CENTER" layoutX="55.0" layoutY="323.0" onAction="#add_orange" />
+                              <Button fx:id="fanta1" layoutX="453.0" layoutY="294.0" mnemonicParsing="false" onAction="#add_fanta" style="-fx-background-color: #303F9F;" text="add to my cart" textFill="#ffd900" />
+                              <TextField fx:id="cola_amount" layoutX="469.0" layoutY="30.0" prefHeight="9.0" prefWidth="29.0" text="1" />
+                              <TextField fx:id="sprit_amount" layoutX="484.0" layoutY="156.0" prefHeight="9.0" prefWidth="29.0" text="1" />
+                              <TextField fx:id="fante_amount" layoutX="485.0" layoutY="259.0" prefHeight="9.0" prefWidth="29.0" text="1" />
+                              <ImageView fx:id="orange_pic" fitHeight="95.0" fitWidth="123.0" layoutX="305.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../orange.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="orange_name" alignment="CENTER" layoutX="66.0" layoutY="395.0" />
+                              <TextField fx:id="orange_number" alignment="CENTER" layoutX="66.0" layoutY="427.0" />
+                              <TextField fx:id="orange_price" alignment="CENTER" layoutX="66.0" layoutY="459.0" />
+                              <Button fx:id="orange1" layoutX="453.0" layoutY="427.0" mnemonicParsing="false" onAction="#add_orange" style="-fx-background-color: #303F9F;" text="add to my cart" textFill="#ffd900" />
+                              <TextField fx:id="orange_amount" layoutX="485.0" layoutY="382.0" prefHeight="9.0" prefWidth="29.0" text="1" />
+                              <Pane layoutX="-3.0" layoutY="127.0" prefHeight="10.0" prefWidth="561.0" style="-fx-background-color: #303F9F;" />
+                              <ImageView fx:id="nature_pic" fitHeight="95.0" fitWidth="123.0" layoutX="282.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../פרוייקט/neture%20vally.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="nature_name" alignment="CENTER" layoutX="66.0" layoutY="512.0" />
+                              <TextField fx:id="nature_number" alignment="CENTER" layoutX="66.0" layoutY="544.0" />
+                              <TextField fx:id="nature_price" alignment="CENTER" layoutX="66.0" layoutY="576.0" />
+                              <TextField fx:id="neture_amount" layoutX="485.0" layoutY="518.0" prefHeight="9.0" prefWidth="29.0" text="1" />
+                              <Button fx:id="nature1" layoutX="453.0" layoutY="563.0" mnemonicParsing="false" onAction="#add_neture" style="-fx-background-color: #303F9F;" text="add to my cart" textFill="#ffd900" />
+                              <Pane layoutX="11.0" layoutY="628.0" prefHeight="9.0" prefWidth="547.0" style="-fx-background-color: #303F9F;" />
+                              <ImageView fx:id="doritos_pic" fitHeight="95.0" fitWidth="123.0" layoutX="298.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../פרוייקט/doritos.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="doritos_name" alignment="CENTER" layoutX="66.0" layoutY="648.0" />
+                              <TextField fx:id="doritos_number" alignment="CENTER" layoutX="66.0" layoutY="680.0" />
+                              <TextField fx:id="doritos_price" alignment="CENTER" layoutX="66.0" layoutY="712.0" />
+                              <TextField fx:id="doritos_amount" layoutX="485.0" layoutY="654.0" prefHeight="9.0" prefWidth="29.0" text="1" />
+                              <Button fx:id="doritos1" layoutX="453.0" layoutY="699.0" mnemonicParsing="false" onAction="#add_doritos" style="-fx-background-color: #303F9F;" text="add to my cart" textFill="#ffd900" />
+                              <Pane layoutX="398.0" layoutY="6.0" prefHeight="989.0" prefWidth="6.0" style="-fx-background-color: #303F9F;" />
+                              <Pane layoutX="11.0" layoutY="748.0" prefHeight="9.0" prefWidth="547.0" style="-fx-background-color: #303F9F;" />
+                              <ImageView fx:id="bamba_pic" fitHeight="95.0" fitWidth="123.0" layoutX="297.0" layoutY="758.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../פרוייקט/bamba.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="bamba_name" alignment="CENTER" layoutX="65.0" layoutY="761.0" />
+                              <TextField fx:id="bamba_number" alignment="CENTER" layoutX="65.0" layoutY="793.0" />
+                              <TextField fx:id="bamba_price" alignment="CENTER" layoutX="65.0" layoutY="825.0" />
+                              <TextField fx:id="bamba_amount" layoutX="484.0" layoutY="767.0" prefHeight="9.0" prefWidth="29.0" text="1" />
+                              <Pane layoutX="11.0" layoutY="861.0" prefHeight="9.0" prefWidth="547.0" style="-fx-background-color: #303F9F;" />
+                              <ImageView fx:id="waffle_pic" fitHeight="95.0" fitWidth="123.0" layoutX="297.0" layoutY="871.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../פרוייקט/waffle.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="waffle_name" alignment="CENTER" layoutX="65.0" layoutY="874.0" />
+                              <TextField fx:id="waffle_number" alignment="CENTER" layoutX="65.0" layoutY="906.0" />
+                              <TextField fx:id="waffle_price" alignment="CENTER" layoutX="66.0" layoutY="938.0" />
+                              <TextField fx:id="waffle_amount" layoutX="484.0" layoutY="880.0" prefHeight="9.0" prefWidth="29.0" text="1" />
+                              <Button fx:id="waffle1" layoutX="452.0" layoutY="925.0" mnemonicParsing="false" onAction="#add_waffle" style="-fx-background-color: #303F9F;" text="add to my cart" textFill="#ffd900" />
+                              <Button fx:id="bamba1" layoutX="452.0" layoutY="812.0" mnemonicParsing="false" onAction="#add_bamba" style="-fx-background-color: #303F9F;" text="add to my cart" textFill="#ffd900" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <ChoiceBox fx:id="choose_machine" layoutX="219.0" layoutY="171.0" prefWidth="150.0" />
+            <Button fx:id="confirm1" layoutX="268.0" layoutY="214.0" mnemonicParsing="false" onAction="#machineChose" text="confirm" />
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>

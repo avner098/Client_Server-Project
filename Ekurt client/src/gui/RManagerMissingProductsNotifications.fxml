@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="777.0" prefWidth="1035.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MissingProductsNotificationsController">
+   <children>
+      <MenuBar prefHeight="22.0" prefWidth="654.0" VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <MenuItem mnemonicParsing="false" text="Open…" />
+                  <Menu mnemonicParsing="false" text="Open Recent" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As…" />
+                  <MenuItem mnemonicParsing="false" text="Revert" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Preferences…" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Quit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Undo" />
+                  <MenuItem mnemonicParsing="false" text="Redo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Cut" />
+                  <MenuItem mnemonicParsing="false" text="Copy" />
+                  <MenuItem mnemonicParsing="false" text="Paste" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Select All" />
+                  <MenuItem mnemonicParsing="false" text="Unselect All" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="762.0" prefWidth="875.0" style="-fx-background-color: #303F9F;">
+         <children>
+            <ImageView fx:id="img" fitHeight="118.0" fitWidth="252.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/ממשק/ממשק/piccc.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="316.0" layoutY="85.0" prefHeight="66.0" prefWidth="438.0" text="Missing Products:" textFill="#eaea0e">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <Button fx:id="BackButton" layoutX="26.0" layoutY="684.0" mnemonicParsing="false" onAction="#Back" prefHeight="47.0" prefWidth="116.0" style="-fx-background-color: #03A9F4;" text="Back" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <TableView fx:id="table" layoutX="26.0" layoutY="167.0" prefHeight="476.0" prefWidth="984.0">
+              <columns>
+                <TableColumn fx:id="MachineID" prefWidth="73.60003280639648" text="Machine ID" />
+                  <TableColumn fx:id="MachineName" prefWidth="99.199951171875" text="Machine Name" />
+                <TableColumn fx:id="Low_bar" prefWidth="75.20002746582031" text="Low Bar" />
+                  <TableColumn fx:id="MissingProducts" prefWidth="492.0" text="Missing Products" />
+                  <TableColumn fx:id="SendMessageToEmployee" prefWidth="241.0" text="Send message to regional employee" />
+              </columns>
+            </TableView>
+            <Button fx:id="SendMessagesBTN" layoutX="810.0" layoutY="684.0" mnemonicParsing="false" onAction="#Send_Messages_to_Employee" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #03A9F4;" text="Send Messages" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="RefreshButton" layoutX="894.0" layoutY="109.0" mnemonicParsing="false" onAction="#RefreshMissingProductsList" prefHeight="47.0" prefWidth="116.0" style="-fx-background-color: #03A9F4;" text="Refresh" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

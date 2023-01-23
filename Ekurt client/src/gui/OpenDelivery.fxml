@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="845.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OpenDeliveryController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="845.0" prefWidth="1033.0" style="-fx-background-color: #303F9F;">
+         <children>
+            <ImageView fitHeight="118.0" fitWidth="252.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label id="WelcomeTxt" fx:id="welcome" layoutX="401.0" layoutY="42.0" prefHeight="98.0" prefWidth="402.0" text="Delivery status" textFill="#eaea0e">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <Button id="lgout_btn" fx:id="backbtn" layoutX="26.0" layoutY="772.0" mnemonicParsing="false" onAction="#BackWindows" prefHeight="47.0" prefWidth="116.0" style="-fx-background-color: #03A9F4;" text="Back" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="1033.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <TableView fx:id="Table_View" layoutX="103.0" layoutY="300.0" prefHeight="427.0" prefWidth="875.0">
+               <columns>
+                  <TableColumn fx:id="OrderNum" prefWidth="112.0" text="OrderNumber" />
+                  <TableColumn fx:id="Address" prefWidth="112.0" text="Address" />
+                  <TableColumn fx:id="Customer_Name" prefWidth="161.0" text="Customer_Name" />
+                  <TableColumn fx:id="Customer_Phone_Number" prefWidth="219.0" text="Customer_Phone_Number" />
+                  <TableColumn fx:id="Delivery_Date" minWidth="0.0" prefWidth="118.0" text="Delivery_Date" />
+                  <TableColumn fx:id="Status" prefWidth="151.0" text="Status" />
+               </columns></TableView>
+            <ImageView fx:id="img" fitHeight="118.0" fitWidth="201.0" layoutX="9.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/logo.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="apply" layoutX="803.0" layoutY="757.0" mnemonicParsing="false" onAction="#apply_changes" prefHeight="39.0" prefWidth="116.0" style="-fx-background-color: #eaea0e;" text="Apply" />
+            <Label id="WelcomeTxt" fx:id="welcome1" layoutX="142.0" layoutY="132.0" prefHeight="63.0" prefWidth="892.0" text="change status to 'Set_Eastimated_Delivery_Date' to Authorized delivery and to set the delivery date" textFill="#eaea0e">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label id="WelcomeTxt" fx:id="welcome11" layoutX="142.0" layoutY="195.0" prefHeight="63.0" prefWidth="979.0" text="change status to 'Arrived' to Close the Order and only when got confirmation from user in message windows" textFill="#eaea0e">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

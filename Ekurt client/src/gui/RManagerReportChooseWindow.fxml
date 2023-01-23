@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="456.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegionManagerReportChooseController">
+   <children>
+      <MenuBar prefHeight="22.0" prefWidth="654.0" VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <MenuItem mnemonicParsing="false" text="Open…" />
+                  <Menu mnemonicParsing="false" text="Open Recent" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As…" />
+                  <MenuItem mnemonicParsing="false" text="Revert" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Preferences…" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Quit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Undo" />
+                  <MenuItem mnemonicParsing="false" text="Redo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Cut" />
+                  <MenuItem mnemonicParsing="false" text="Copy" />
+                  <MenuItem mnemonicParsing="false" text="Paste" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Select All" />
+                  <MenuItem mnemonicParsing="false" text="Unselect All" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="431.0" prefWidth="742.0" style="-fx-background-color: #303F9F;">
+         <children>
+            <ImageView fx:id="img" fitHeight="118.0" fitWidth="252.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/ממשק/ממשק/piccc.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="272.0" layoutY="27.0" prefHeight="66.0" prefWidth="332.0" text="Report details" textFill="#eaea0e">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <Button fx:id="BackBtn" layoutX="14.0" layoutY="370.0" mnemonicParsing="false" onAction="#Back" prefHeight="47.0" prefWidth="116.0" style="-fx-background-color: #03A9F4;" text="Back" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="ChooseBtn" layoutX="494.0" layoutY="370.0" mnemonicParsing="false" onAction="#ChooseReport" prefHeight="47.0" prefWidth="116.0" style="-fx-background-color: #03A9F4;" text="Choose" textFill="#eaea0e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="ReporttypeComboBox" layoutX="142.0" layoutY="199.0" prefWidth="150.0" />
+            <ComboBox fx:id="YearComboBox" layoutX="142.0" layoutY="307.0" prefWidth="150.0" />
+            <ComboBox fx:id="MonthComboBox" layoutX="343.0" layoutY="199.0" prefWidth="150.0" />
+            <Label fx:id="Reporttype" layoutX="142.0" layoutY="163.0" prefHeight="36.0" prefWidth="116.0" text="Report type" textFill="#eaea0e">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="MonthLabel" layoutX="343.0" layoutY="163.0" prefHeight="36.0" prefWidth="116.0" text="Month" textFill="#eaea0e">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="YearLabel" layoutX="142.0" layoutY="271.0" prefHeight="36.0" prefWidth="116.0" text="Year" textFill="#eaea0e">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="MachineComboBox" layoutX="344.0" layoutY="307.0" prefWidth="150.0" />
+            <Label fx:id="Machine" layoutX="344.0" layoutY="271.0" prefHeight="36.0" prefWidth="116.0" text="Machine" textFill="#eaea0e">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
